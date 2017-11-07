@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<center><h1>The available contacts in your phone book are :</h1></center>
+		<ul>
+			<br>
+			{% for contact in all_contacts %}
+			<li>
+				<br>
+				NAME : {{contact.name}}<br>Phone Number : {{contact.phone_number}}<br>Email : {{contact.email}}<br>Added time : {{contact.added_at}}	
+			</li>		
+			{% endfor %}
+			<br><br>
+			<input type="button" onclick="location.href='{% url 'addcontact' %}';" value="Addcontact" />
+		</ul>
+	</body>
+</html>
